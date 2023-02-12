@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+#title
+{    
+  background-color:  #FFD4D4;
+}
+.font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    line-height: 1.5;
+    color:#111111;
+    padding-top: 100px;
+    padding-left:50px;
+}
+.para{
+    font-family:'Montserrat';
+    color:#333333;
+    font-size:2rem;
+    padding-left:50px;
+}
+.font-md{
+    font-family:'Montserrat',sans-serif;
+    font-size:1.5rem;
+    color:black;
+    padding-top:20px;
+}
+
+.container2{
+    padding: 7% 15%;
+    line-height: 4;
+}
+.font1{
+    font-family: 'Ubuntu', sans-serif;
+}
+.navbar2{
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+}
+.navbar1{
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: 5rem;
+    color: var(--bs-navbar-brand-color);
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    color: black;
+}
+.dbutton{
+    margin: 5% 3% 5% 0;
+}
+.tittleimage{
+    width: 100%;
+    rotate: -90deg;
+    position: relative;
+    top: 100px;
+    left: 663.5px;
+}
+.phoneimg{
+    width: 70%;
+    position: relative;
+    left: 250.5px;
+    top:80px;
+    rotate:-90deg;
+}
+.ngo-pic{
+    width:70%;
+    margin:auto;
+    padding-left:100px;
+}
+.h3size{
+    font-size: 2rem;
+}
+.h3size1{
+    margin-right: 35px;
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem;
+}
+.h2size{
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+.icon
+{
+    color: #ef8172;
+}
+.icon:hover{
+    color: #ff4c68;
+}
+#testimonials{
+    background-color: #ef8172;
+    text-align: center;
+    padding: 7% 15%;
+    color: white;
+}
+.dogimg{
+    width: 20%;
+    border-radius: 90%;
+    margin: 20px;
+}
+#press{
+
+ background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.sponsor{
+    width: 15%;
+    padding: 0 15px 0 15px;
+}
+#cta{
+    background-color:#ef8172;
+    text-align: center;
+}

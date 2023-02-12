@@ -1,0 +1,85 @@
+<%- include("partials/header") -%>
+<h2>Available Jobs</h2>
+<div class="company">
+    
+  <h3>Company y</h3>
+  <p>A well-established company is seeking a web developer to join their team.</p>
+  <p>Responsibilities:</p>
+  <ul>
+    <li>Develop and maintain websites</li>
+    <li>Write clean and efficient code</li>
+    <li>Troubleshoot and debug any issues</li>
+  </ul>
+  <p>Requirements:</p>
+  <ul>
+    <li>Proven experience as a web developer</li>
+    <li>In-depth understanding of HTML, CSS, and JavaScript</li>
+    <li>Familiarity with Responsive Design</li>
+  </ul>
+  <h4>Apply for this Job</h4>
+    <label for="resume">Resume:</label>
+    <input type="file" id="file-1" />
+</div>
+<div class="company">
+    
+  <h3>Company x</h3>
+  <p>A well-established company is seeking a web developer to join their team.</p>
+  <p>Responsibilities:</p>
+  <ul>
+    <li>Develop and maintain websites</li>
+    <li>Write clean and efficient code</li>
+    <li>Troubleshoot and debug any issues</li>
+  </ul>
+  <p>Requirements:</p>
+  <ul>
+    <li>Proven experience as a web developer</li>
+    <li>In-depth understanding of HTML, CSS, and JavaScript</li>
+    <li>Familiarity with Responsive Design</li>
+  </ul>
+  <h4>Apply for this Job</h4>
+    <label for="resume">Resume:</label>
+    <input type="file" id="file-2" />
+</div>
+<canvas id="pie-chart"></canvas>
+<script>
+  let companyResumes = {
+    1: [],
+    2: [],
+  };
+
+  let inputs = document.querySelectorAll("input[type='file']");
+  inputs.forEach(input => {
+    input.addEventListener("change", event => {
+      let id = parseInt(event.target.id.split("-")[1]);
+      companyResumes[id].push(event.target.files[0]);
+      updatePieChart();
+    });
+  });
+
+  function updatePieChart() {
+    let pieChartData = [];
+    for (let company in companyResumes) {
+      pieChartData.push(companyResumes[company].length);
+    }
+
+    let pieChart = new Chart(document.getElementById("pie-chart"), {
+      type: "pie",
+      data: {
+        labels: ["Company 1", "Company 2"],
+        datasets: [
+          {
+            data: pieChartData,
+            backgroundColor: ["#36a2eb", "#ffcd56"],
+          },
+        ],
+      },
+      options: {
+        legend: {
+          position: "bottom",
+        },
+      },
+    });
+  }
+</script>
+</body>
+</html>
