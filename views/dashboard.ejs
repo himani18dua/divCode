@@ -3,22 +3,23 @@
   <div class="row">
   <div class="col-lg-6">
     <div class="info">
-      <h1 style="margin: 0 0 10px 20px;">USER DETAILS</h1>      
+      <h1 style="padding-bottom: 10px;">USER DETAILS</h1>      
           <ul type="none">
           <% udetails.forEach(function(user){ %>
          <li>
-          <h4>Name: <%=user.name%></h4>
+          <h3>Name: <%=user.name%></h4>
         </li>
         <li>
-          <h4>Email: <%=user.email%></h4>
+          <h3>Email: <%=user.email%></h4>
         </li>
         <li>
-          <h4>username: <%=user.username%></h4>
+          <h3>username: <%=user.username%></h4>
         </li>
     
       <form action="/dashboard" method="post">
-        <label for="sbutton"><h6>Compose new blog</h6></label>
-        <button type="submit" name="sbutton" value="<%=user.username%>">GO</button>
+        <div>
+          <button type="submit" class="btn btn-primary ex3" value="<%=user.username%>">COMPOSE NEW BLOG</button>
+        </div> 
         </form>   
       <%})%>
       </ul>
