@@ -1,18 +1,19 @@
 <%- include("partials/header") -%>
-<h1>BLOGS</h1>
-<div class="posts">
+<h1 class="align">BLOGS</h1>
+<div class="posts blog">
 <ul type="none">
     <% showPost.forEach(function(posts){ %>
-        <li>
-            Title:
-            <br><%=posts.title%>
+       <div class="blog-post">
+        <li class="blog-post-title">
+            <%=posts.title%></h3>
         </li>
-        <li>
+        <li class="blog-post-content">
             <%=posts.content%>
         </li>
-        <li>
+        <li class="blog-subtitle">
             Author:<%=posts.name%>
         </li>
+        </div>
     <% }) %>
 </ul>
 </div>
