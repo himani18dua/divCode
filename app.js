@@ -30,12 +30,16 @@ const registereduser =new mongoose.Schema({
   password:String
 });
 const postSchema = new mongoose.Schema({
-  title:String,
+  title:{
+    type : String,
+    strength:2
+    },
   content:String,
   name:String
 });
 var uid="";
 var newdetails=[];
+var sposts="";
 const user = mongoose.model("user",userschema);
 const post = mongoose.model("post",postSchema);
 const vuser = mongoose.model("vuser",registereduser);
@@ -78,7 +82,6 @@ app.get("/dashboard",function(req,res){
  else{ 
   user.find({_id:uid}).then(function(userDetails)
   {
-      console.log(userDetails);
       res.render("dashboard",{udetails:userDetails}); 
   })
 }
@@ -120,24 +123,13 @@ app.get("/blogs",function(req,res){
   })
 })
 
-// app.get("/posts/:postName",function(req,res){
-//   posts.forEach(function(post){
-//     let typed=_.lowerCase(req.params.postName);
-//     let stored=_.lowerCase(post.title);
-//     if(typed===stored){
-//       res.render("post",{title:post.title,content:post.content});
-//     }});
-// });
-
-
-
-
-
-
-
-
-
-
+app.get("/posts/:postName",function(req,res){
+  let typed=_.lowerCase(req.params.postName);
+  post.find({title:typed}).collation( { locale: 'en', strength: 2 } ).then(function(posts){
+      sposts=posts
+      res.render("post",{posts:sposts});
+  });
+});
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
